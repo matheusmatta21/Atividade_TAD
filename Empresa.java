@@ -1,4 +1,3 @@
-package Java;
 import java.util.List;
 
 class Empregado {
@@ -9,15 +8,17 @@ class Empregado {
     private Departamento departamento;
 
     public void atualizarInformacoes(String nome, String cargo, double salario) {
-        System.out.println("");
+        this.nome = nome;
+        this.cargo = cargo;
+        this.salario = salario;
     }
 
     public void transferirDepartamento(Departamento novoDepartamento) {
-        System.out.println("");
+        this.departamento = novoDepartamento;
     }
 
     public Departamento informacoesDepartamento() {
-        return departamento;
+        return this.departamento;
     }
 }
 
@@ -29,20 +30,14 @@ class Departamento {
 
 
     public void adicionarEmpregado(Empregado empregado) {
-        System.out.println("");
+        empregados.add(empregado);
     }
 
     public void removerEmpregado(Empregado empregado) {
-        System.out.println("");
+        empregados.remove(empregado);
     }
 
     public List<Empregado> informacoesEmpregados() {
         return empregados;
-    }
-}
-
-class Empresa {
-    public void main(String[] args) {
-        System.out.println("");
     }
 }
